@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("car1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #f5f5f5;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        color: white;
+}
+.header {
+    margin-top: 150px;
+    color: white;
+    margin-left: 45px;
+}
+.text {
+    margin-left: 45px;
+    color: aliceblue;
+}
+.booknow {
+    margin-top: 2rem;
+    margin-left: 45px;
+    padding: 13px 20px;
+    border-radius: 11px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.booknow:hover{
+    background-color: rgb(27, 27, 27);
+    color: rgb(255, 165, 9);
+}
+.exploreus {
+    margin-left: 10px;
+    padding: 13px 20px;
+    border-radius: 11px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(134, 71, 178);
+}
+.exploreus:hover{
+    background-color: rgb(155, 131, 227);
+    color: rgb(5, 4, 4);
+}
+footer {
+    display: flex;
+    margin-top: 18rem;
+    background-color:#292929;
+}
+footer> div {
+    padding-top: 30px;
+    margin-left: 50px;
+    width: 29%;
+}
+img{
+    height: 35px;
+    flex-direction: row;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+img:hover{
+    height: 28px;
+    width: 28px;
+}
+.fotbtn{
+    padding: 10px 85px;
+    border-radius: 9px;
+    border: none;
+    margin-top: 30px;
+}
+.fotbtn:hover{
+    background-color: #151515;
+    cursor: pointer;
+    color: rgb(133, 164, 193);
+}
+
+.second ul li{
+    list-style: none;
+    margin-top: 10px;
+}
+.second ul li:hover{
+font-size: 1.3rem;
+color: rgb(245, 165, 15);
+cursor: pointer;
+list-style: circle;
+}
+.third .para{
+cursor: pointer;
+}
+.third .para:hover{
+color: olivedrab;
+font-size: 1.1rem;
+
+}

@@ -1,0 +1,72 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 10px;
+    padding-right: 26.2rem;
+    padding-left: 26.2rem;
+    background: linear-gradient(to right, white , rgb(80, 233, 80));
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgba(221, 202, 230, 0.333);
+    padding: 20px;
+    background-color: white;
+}
+
+#fname, #lname, #passwordinput, #emailinput {
+    padding: 7px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.submitbtn {
+    width: fit-content;
+    margin: 0 auto;
+    border: none;
+    padding: 7px 10px;
+    background-color: black;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.submitbtn:hover {
+    background-color: rgb(144, 144, 144);
+}
+
+label {
+    font-size: 18px;
+    color: rgb(105, 103, 103);
+}
+
+p {
+    font-size: 16px;
+}
+
+.image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding-top: 0px;
+}
+
+#alternative {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: rgba(82, 174, 224, 0.788);
+}

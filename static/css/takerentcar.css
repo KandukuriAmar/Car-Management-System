@@ -1,0 +1,63 @@
+body {
+    background-color: rgb(36, 36, 36);
+  }
+  .gridc{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .card-container {
+    margin: 17px;
+    width: 27%;
+    height: 27rem;
+    
+    background-color: #d1975d;
+    border-radius: 7px;
+  }
+  .card-container:hover {
+    background-color: #e08337;
+  }
+  .imgg {
+    width: 95%;
+    padding-left: 10px;
+    padding-top: 10px;
+    object-fit: cover;
+
+  }
+  .imgg:hover{
+    width: 85%;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 5px;
+    cursor:copy;
+  }
+  .subbtn{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 9px 20px;
+    border-radius:9px;
+    border: none;
+    margin: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+  .subbtn:hover{
+    background-color: #262626;
+    cursor: pointer;
+    color: rgb(146, 196, 241);
+    box-shadow: #626161;
+    transition: 0.3s
+  }
+  .subbtn:active{
+    color: rgb(237, 160, 104);
+  }
+  p{
+    padding-left: 5px;
+
+  }
+  p:hover{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+  }

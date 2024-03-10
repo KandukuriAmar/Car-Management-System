@@ -1,0 +1,163 @@
+{% extends 'Navbar.html' %}
+{% load static %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('{% static "../static/images/car1.jpg" %}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #f5f5f5;
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+            "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            color: white;
+        }
+        .header {
+            margin-top: 150px;
+            color: white;
+            margin-left: 45px;
+        }
+        .text {
+            margin-left: 45px;
+            color: aliceblue;
+        }
+        .booknow {
+            margin-top: 2rem;
+            margin-left: 45px;
+            padding: 13px 20px;
+            border-radius: 11px;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .booknow:hover{
+            background-color: rgb(27, 27, 27);
+            color: rgb(255, 165, 9);
+        }
+        .exploreus {
+            margin-left: 10px;
+            padding: 13px 20px;
+            border-radius: 11px;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            color: white;
+            background-color: rgb(134, 71, 178);
+        }
+        .exploreus:hover{
+            background-color: rgb(155, 131, 227);
+            color: rgb(5, 4, 4);
+        }
+        footer {
+            display: flex;
+            margin-top: 18rem;
+            background-color:#292929;
+        }
+        footer> div {
+            padding-top: 30px;
+            margin-left: 50px;
+            width: 29%;
+        }
+        img{
+            height: 35px;
+            flex-direction: row;
+            cursor: pointer;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        img:hover{
+            height: 28px;
+            width: 28px;
+        }
+        .fotbtn{
+            padding: 10px 85px;
+            border-radius: 9px;
+            border: none;
+            margin-top: 30px;
+        }
+        .fotbtn:hover{
+            background-color: #151515;
+            cursor: pointer;
+            color: rgb(133, 164, 193);
+        }
+
+        .second ul li{
+            list-style: none;
+            margin-top: 10px;
+        }
+        .second ul li:hover{
+            font-size: 1.3rem;
+            color: rgb(245, 165, 15);
+            cursor: pointer;
+            list-style: circle;
+        }
+        .third .para{
+            cursor: pointer;
+        }
+        .third .para:hover{
+            color: olivedrab;
+            font-size: 1.1rem;
+
+        }
+    </style>
+</head>
+<body>
+<main>
+    <h1 class="header">Car rental</h1>
+    <div class="text">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi,
+        <br />aspernatur aut illum explicabo dolore, tempora reiciendis ad
+        <br />sequi quo similique a? Similique quia iure
+    </div>
+    <a href="{% url 'takerentcar' %}"><button class="booknow">Book Now</button></a>
+    <a href="{% url 'takerentcar' %}"><button class="exploreus">Explore Us</button></a>
+    <br/>
+</main>
+
+<footer>
+    <div class="first">
+        <h4 style="padding-left: 10px;">LuxeDrive Elegance</h4>
+        <a class="imgs">
+            <a href="https://www.google.com/"><img src="{% static '/images/google.png' %}" alt="G"></a>
+            <a href="https://about.meta.com/"><img src="{% static '/images/meta.png' %}" alt="M"></a>
+            <a href="https://www.linkedin.com/"><img src="{% static '/images/linkedin.png' %}" alt="L"></a>
+            <a href="https://github.com/"><img src="{% static '/images/github.png' %}" alt="G"></a><br/>
+            <a href="{% url 'takerentcar' %}"><button class="fotbtn" href="{% url 'takerentcar' %}">Get Car</button></a>
+        </div>
+    </div>
+    <div class="second">
+        <div>
+            <h3>Features Of Center</h3>
+            <ul>
+                <li>Location and Accessibility</li>
+                <li>Cost and Budget</li>
+                <li>Space Requirements</li>
+                <li>Lease Terms and Conditions</li>
+                <li>Amenities and Infrastructure</li>
+            </ul>
+        </div>
+    </div>
+    <div class="third">
+        <div>
+            <h2>*Take Best Decision</h2>
+            <p style="margin-left: 30px;">&copy; 2024 RentCar.com</p>
+            <p class="para">"Discover the freedom of the open road with LuxeDrive Elegance.
+                Your trusted partner for seamless car rental experiences. Quality vehicles,
+                unbeatable service, and competitive rates. Drive with confidence,
+                drive with LuxeDrive Elegance."</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+{% endblock %}

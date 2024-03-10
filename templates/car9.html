@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-image: url('../static/images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .bookingcar {
+            height: 300px;
+            width: 400px;
+            border-radius: 7px;
+            position: absolute;
+            left: 35rem;
+            top: 9rem;
+            transition: top 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .bookingcar:hover {
+            cursor: pointer;
+            border-radius: 17px;
+            box-shadow: 0 10px 10px rgba(255, 255, 255, 0.2); /* Adding a box-shadow for visual effect */
+        }
+        
+        .full-container{
+
+            margin-top: 10rem;
+        }
+        .all{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            margin-top: 30px;
+        }
+        .form-container{
+            border:2px solid rgb(99, 97, 97);
+            border-radius: 12px;
+            padding: 23px 80px;
+        }
+        input{
+            width: 21rem;
+            height: 34px;
+            border-radius: 5px;
+            border: none;
+            font-size: 15px;
+        }
+        input:hover{
+            color: #151515;
+        }
+        h2{
+            display: flex;
+            justify-content: center;
+        }
+        .subbtn{
+            padding: 10px 85px;
+            display: flex;
+            margin-left: 4rem;
+            border-radius: 9px;
+            border: none;
+        }
+        .subbtn:hover{
+            background-color: #151515;
+            cursor: pointer;
+            color: rgb(133, 164, 193);
+        }
+        .divv{
+            color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-left: 50rem;
+            margin-top: 101px;
+        }
+        span{
+            color: #151515;
+        }
+        span:hover{
+            cursor: pointer;
+        }
+        input:placeholder-shown{
+            padding-left: 15px;
+        }
+        label{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center">Car3</h1>
+    <img src="../static/images/car7.jpg" alt="..." class="bookingcar"/>
+    <div class="divv">
+        <h1>CarName: <span class="auto-type"></span></h1>
+        <h1>CarModelYear: <span class="sauto-type"></span></h1>
+        <h1>Color: <span class="tauto-type"></span></h1>
+    </div><br/><br/><br/>
+    <div class="full-container">
+        <h2 style="color: aliceblue;">Give Your details To Take rent </h2>
+      <div class="all">
+        <form class="form-container" action="{% url 'book' %}" method="POST">
+          {% csrf_token %}
+          <label for="name">Name</label><br/>
+          <input id="name" class="name" type="text" name="name" placeholder="Enter Name" required><br/><br/>
+          <label for="email">Email</label><br/>
+          <input id="email" class="email" type="email" name="email" placeholder="Enter Email" required><br/><br/>
+          <label for="phonenumber">Phone Number</label><br/>
+          <input id="phonenumber" class="phonenumber" type="text" name="phonenumber" placeholder="Enter Phone Number" required><br/><br/>
+          <label for="password">Password</label><br/>
+          <input id="password" class="password" type="password" name="password" placeholder="Enter Password" required>
+          <br/><br/><br/>
+          <button class="subbtn" type="submit">Submit</button>
+      </form>  
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script>
+        var typed=new Typed(".auto-type", {
+            strings: ["gliffindor","gliffindor"],
+            typeSpeed: 200,
+            backSpeed: 400,
+            loop:true
+        })
+        var styped=new Typed(".sauto-type", {
+            strings: ["2020","2020"],
+            typeSpeed: 200,
+            backSpeed: 400,
+            loop:true
+        })
+        var ttyped=new Typed(".tauto-type", {
+            strings: ["white","white"],
+            typeSpeed: 200,
+            backSpeed: 400,
+            loop:true
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+{% extends 'Navbar.html' %}
+{% load static %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoginPage</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-image: url(../static/background.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        .container{
+            display: flex;
+            border: 2px solid rgb(133, 132, 132);
+            padding: 18px;
+            text-decoration: none;
+            padding: 14px 16px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            max-width: 30rem;
+            height: 21rem;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .hi{
+            margin-top: 15rem;
+        }
+        
+        #emailinput,#passwordinput{
+            padding: 7px 15px;
+            width: 100%;
+            border-radius: 6px;
+            border: none;
+            color: gray;
+        }
+        .submitbtn{
+            padding: 7px 100px;
+            border: none;
+            background-color: greenyellow;
+            width: 270px;
+            cursor: pointer;
+            transition: transform 0.4s;
+        }
+        .submitbtn:hover{
+            background-color: rgb(156, 220, 60);
+            border-radius: 25rem;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            color: rgba(82, 174, 224, 0.788);
+        }
+
+        input::placeholder {
+            margin-left: 15px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="hi">
+        <h2 style="text-align: center;">Login Page</h2>
+
+        <form class="container" action="{% url 'login1' %}" method="post">
+            {% csrf_token %}
+            <div>
+                <label for="emailinput" id="uname">Email:</label><br/>
+                <input id="emailinput" class="emailinput" type="text" name="emailinput" placeholder="enter your email" required><br/><br/>
+                <label for="passwordinput" id="upassword" style="font-weight: bold;">Password:</label><br/>
+                <input id="passwordinput" class="passwordinput" type="password" name="passwordinput" placeholder="enter your password" required><br/><br/>
+        
+                <button type="submit" class="submitbtn">Login</button><br/>
+                <p style="font-weight: bold; margin-top: 39px">Don't have an account? <a href="{% url 'registercall' %}">SignUp</a> </p>
+            </div>
+        </form>
+        
+    </div>
+</body>
+</html>
+{% endblock %}

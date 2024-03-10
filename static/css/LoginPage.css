@@ -1,0 +1,32 @@
+/* body {
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 30px;
+    background: linear-gradient(to right, white, rgb(243, 165, 21));
+}
+
+.container{
+    display: flex;
+    border: 2px solid rgb(133, 132, 132);
+    padding: 18px;
+}
+
+#emailinput,#passwordinput{
+    padding: 7px 15px;
+    width: 100%;
+}
+.submitbtn{
+    padding: 7px 100px;
+    border: none;
+    background-color: greenyellow;
+    width: 270px;
+    cursor: pointer;
+}
+.submitbtn:hover{
+    background-color: rgb(156, 220, 60);
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: rgba(82, 174, 224, 0.788);
+} */
